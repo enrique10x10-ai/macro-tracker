@@ -1065,7 +1065,9 @@
       );
     };
 
-    ReactDOM.render(<MacroTracker />, document.getElementById('root'));
+    // React 18 compatible render
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<MacroTracker />);
   </script>
 </body>
 </html>
